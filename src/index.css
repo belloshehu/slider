@@ -23,8 +23,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--background-color);
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  overflow: hidden;
 }
 h1, h2, h3{
   text-transform: capitalize;
@@ -35,12 +35,8 @@ code {
     monospace;
 }
 main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+  display: block;
   height: 95%;
-
 }
 header{
   display: flex;
@@ -142,13 +138,16 @@ header > h1::before{
 .people{
   background-color: var(--people-bg-color);
   padding: 10px;
-  width: 50%;
+  width: 60%;
   height: 500px;
   color: black;
   display: flex;
   flex-direction: column;
+  align-self: center;
   box-shadow: var(--image-shadow);
   border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
   /* justify-content: center; */
 }
 
@@ -181,5 +180,4 @@ article.nextSlide {
 }
 article.lastSlide{
   transform: translateX(-100%) scale(0.5) rotate(180deg);
-
 }
